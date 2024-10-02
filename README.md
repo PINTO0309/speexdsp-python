@@ -4,6 +4,7 @@ speexdsp for python
 [![Build Status](https://travis-ci.org/xiongyihui/speexdsp-python.svg?branch=master)](https://travis-ci.org/xiongyihui/speexdsp-python)
 
 ## Requirements
++ Ubuntu 22.04
 + swig
 + compile toolchain
 + python3.10
