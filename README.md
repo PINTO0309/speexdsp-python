@@ -6,22 +6,13 @@ speexdsp for python
 ## Requirements
 + swig
 + compile toolchain
-+ python
++ python3
 + libspeexdsp-dev
 
 ## Build
 There are two ways to build the package.
 
-1. using setup.py
-
-    ```
-    sudo apt install libspeexdsp-dev
-    git clone https://github.com/xiongyihui/speexdsp-python.git
-    cd speexdsp-python
-    python setup.py install
-    ```
-
-2. using Makefile
+- using Makefile
 
     ```
     git clone https://github.com/xiongyihui/speexdsp-python.git
