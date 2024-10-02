@@ -29,3 +29,7 @@ There are two ways to build the package.
 # Usage: examples/wav_aec.py near.wav far.wav out.wav
 python examples/wav_aec.py tests/nearend_16k.wav tests/farend_16k.wav tests/output.wav
 ```
+
+## Results
+
+https://github.com/PINTO0309/speexdsp-python/blob/python3/tests/output.wav
