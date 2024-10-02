@@ -8,6 +8,7 @@ speexdsp for python
 + compile toolchain
 + python3
 + libspeexdsp-dev
++ python3-dev
 
 ## Build
 There are two ways to build the package.
@@ -15,6 +16,8 @@ There are two ways to build the package.
 - using Makefile
 
     ```
+    sudo apt-get install -y libspeexdsp-dev swig python3-dev
+    
     git clone https://github.com/PINTO0309/speexdsp-python.git
     cd speexdsp-python/src
     make
