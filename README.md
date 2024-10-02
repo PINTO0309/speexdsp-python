@@ -30,7 +30,7 @@ There are two ways to build the package.
 
 import wave
 import sys
-from speexdsp import EchoCanceller
+from src.speexdsp import EchoCanceller
 
 
 if len(sys.argv) < 4:
