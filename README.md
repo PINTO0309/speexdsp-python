@@ -32,6 +32,9 @@ There are two ways to build the package.
 ```bash
 # Usage: examples/wav_aec.py near.wav far.wav out.wav
 python examples/wav_aec.py tests/nearend_16k.wav tests/farend_16k.wav tests/output.wav
+
+near - rate: 16000, channels: 1, length: 25.0
+far - rate: 16000, channels: 1
 ```
 
 ## Results
