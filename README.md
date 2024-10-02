@@ -1,7 +1,7 @@
 speexdsp for python
 ===================
 
-[![Build Status](https://travis-ci.org/xiongyihui/speexdsp-python.svg?branch=master)](https://travis-ci.org/xiongyihui/speexdsp-python)
+Python implementation of acoustic echo cancellation using speexdsp.
 
 ## Requirements
 + Ubuntu 22.04
