@@ -2,8 +2,8 @@
 
 SWIG := swig
 
-CXXFLAGS :=  -fPIC -std=c++11 -I. $(shell pkg-config --cflags speexdsp)  $(shell python-config --cflags)
-LDFLAGS := -shared $(shell pkg-config --libs speexdsp) $(shell python-config --ldflags)
+CXXFLAGS :=  -fPIC -std=c++11 -I. $(shell pkg-config --cflags speexdsp)  $(shell python3-config --cflags)
+LDFLAGS := -shared $(shell pkg-config --libs speexdsp) $(shell python3-config --ldflags)
 CXX := g++
 
 
@@ -16,4 +16,4 @@ _speexdsp.so: speexdsp_wrap.o echo_canceller.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
 
 clean:
-	-rm -f speexdsp_wrap.cpp *.o _speexdsp.so speexdsp.py *.pyc 
+	-rm -f speexdsp_wrap.cpp *.o _speexdsp.so speexdsp.py *.pyc

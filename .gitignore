@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+
+src/speexdsp.py
+src/speexdsp_wrap.o
+src/speexdsp_wrap.cpp
+src/echo_canceller.o
