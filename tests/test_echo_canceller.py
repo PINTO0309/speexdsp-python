@@ -1,7 +1,7 @@
 
 import wave
 import sys
-from speexdsp import EchoCanceller
+from src.speexdsp import EchoCanceller
 import pytest
 
 

@@ -2,7 +2,7 @@
 
 import wave
 import sys
-from speexdsp import EchoCanceller
+from src.speexdsp import EchoCanceller
 
 
 if len(sys.argv) < 4:
