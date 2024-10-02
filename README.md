@@ -15,7 +15,7 @@ There are two ways to build the package.
 - using Makefile
 
     ```
-    git clone https://github.com/xiongyihui/speexdsp-python.git
+    git clone https://github.com/PINTO0309/speexdsp-python.git
     cd speexdsp-python/src
     make
     ```
