@@ -6,7 +6,7 @@ speexdsp for python
 ## Requirements
 + swig
 + compile toolchain
-+ python3
++ python3.10
 + libspeexdsp-dev
 + python3-dev
 
