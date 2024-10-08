@@ -145,7 +145,6 @@ def process_audio_callback(mic_data, reference_data):
     elif output_mode == 'wav' and wav_file:
         # wav_file.write(reference_data)
         # wav_file.write(mic_data)
-        # wav_file.write(reference_data[:, 0])
         wav_file.write(processed_data)
 
 print("Starting audio processing...")
