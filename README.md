@@ -15,9 +15,7 @@ This fork is simply a customized version of https://github.com/xiongyihui/speexd
 + python3-dev
 
 ## Build
-There are two ways to build the package.
-
-```
+```bash
 sudo apt-get install -y libspeexdsp-dev swig python3-dev build-essential libsndfile1
 pip install SoundCard==0.4.3 soundfile==0.12.1 sounddevice==0.5.0
 
