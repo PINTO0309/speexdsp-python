@@ -132,9 +132,20 @@ if output_mode == 'wav':
     wav_file = sf.SoundFile(output_filename, mode='w', samplerate=SAMPLE_RATE, channels=1, subtype='PCM_16')
 
 # 音声データを処理する関数
-def process_audio_callback(mic_data, reference_data):
+def process_audio_callback(mic_data: np.ndarray, reference_data: np.ndarray):
+    # スケーリング係数を設定
+    scaling_factor = np.iinfo(np.int16).max
+
+    # float32 データを int16 にスケーリング
+    mic_data_scaled = (mic_data.flatten() * scaling_factor).astype(np.int16)
+    ref_data_scaled = (reference_data.flatten() * scaling_factor).astype(np.int16)
+
+    # バイトデータに変換
+    mic_data_bytes = mic_data_scaled.tobytes()
+    ref_data_bytes = ref_data_scaled.tobytes()
+
     # エコーキャンセラの処理
-    processed_data = echo_canceller.process(mic_data.tobytes(), reference_data.tobytes())
+    processed_data = echo_canceller.process(mic_data_bytes, ref_data_bytes)
 
     # バイトデータを numpy 配列に変換
     processed_data = np.frombuffer(processed_data, dtype=np.int16)

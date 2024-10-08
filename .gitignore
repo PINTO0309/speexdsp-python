@@ -94,3 +94,4 @@ src/speexdsp_wrap.o
 src/speexdsp_wrap.cpp
 src/echo_canceller.o
 echo_cancelled_output.wav
+out.wav
