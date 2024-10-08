@@ -13,7 +13,7 @@
             ]
         },
         {
-            "name": "mic_speaker_aec",
+            "name": "mic_speaker_aec_wav",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
@@ -22,6 +22,18 @@
             "args": [
                 "wav",
             ]
+        },
+        {
+            "name": "mic_speaker_aec_virtual_speaker",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "speaker",
+            ]
         }
+
     ]
 }
