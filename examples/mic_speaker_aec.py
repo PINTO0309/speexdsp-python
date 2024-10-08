@@ -2,7 +2,7 @@
 sudo apt-get update && sudo apt-get install libsndfile1
 pip install SoundCard==0.4.3 soundfile==0.12.1 sounddevice==0.5.0
 
-# python mic_speaker_aec.py [output_mode] [output_device_index]
+# python mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
 
 # View a list of available audio devices
 python mic_speaker_aec.py
@@ -154,8 +154,6 @@ def process_audio_callback(mic_data: np.ndarray, reference_data: np.ndarray):
     if output_mode == 'speaker' and output_speaker:
         output_speaker.play(processed_data, samplerate=SAMPLE_RATE)
     elif output_mode == 'wav' and wav_file:
-        # wav_file.write(reference_data)
-        # wav_file.write(mic_data)
         wav_file.write(processed_data)
 
 print("Starting audio processing...")
