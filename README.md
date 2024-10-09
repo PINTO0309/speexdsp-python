@@ -23,6 +23,20 @@ git clone https://github.com/PINTO0309/speexdsp-python.git
 cd speexdsp-python/src
 make clean
 make
+
+ls -lh
+
+-rw-rw-r-- 1 xxxx xxxx 1.7K 10月  2 14:37 echo_canceller.cpp
+-rw-rw-r-- 1 xxxx xxxx  414 10月  2 14:37 echo_canceller.h
+-rw-rw-r-- 1 xxxx xxxx 128K 10月  2 15:42 echo_canceller.o
+-rw-rw-r-- 1 xxxx xxxx   26 10月  2 14:37 __init__.py
+-rw-rw-r-- 1 xxxx xxxx  496 10月  2 15:41 Makefile
+drwxrwxr-x 2 xxxx xxxx 4.0K 10月  2 15:42 __pycache__
+-rw-rw-r-- 1 xxxx xxxx  174 10月  2 14:37 speexdsp.i
+-rw-rw-r-- 1 xxxx xxxx 3.0K 10月  2 15:42 speexdsp.py
+-rwxrwxr-x 1 xxxx xxxx 253K 10月  2 15:42 _speexdsp.so
+-rw-rw-r-- 1 xxxx xxxx 127K 10月  2 15:42 speexdsp_wrap.cpp
+-rw-rw-r-- 1 xxxx xxxx 337K 10月  2 15:42 speexdsp_wrap.o
 ```
 
 ## Get started
