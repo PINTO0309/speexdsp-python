@@ -5,6 +5,8 @@ Python implementation of acoustic echo cancellation using speexdsp.
 
 This fork is simply a customized version of https://github.com/xiongyihui/speexdsp-python modified to run on Ubuntu 22.04.
 
+![image](https://github.com/user-attachments/assets/617a65b2-3c12-4db9-a5f6-5d6a8daff317)
+
 ## Requirements
 + Ubuntu 22.04
 + swig
