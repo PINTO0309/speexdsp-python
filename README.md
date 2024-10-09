@@ -50,7 +50,7 @@ far - rate: 16000, channels: 1
 ```
 ### 2. View a list of available audio devices
 ```bash
-python mic_speaker_aec.py
+python examples/mic_speaker_aec.py
 
 === Available audio devices ===
 === Microphones ===
@@ -71,7 +71,7 @@ output_device_index: Index of the speaker used for outputting the echo-cancelled
 ```
 ### 3. Mic + Speaker (reference_speaker) -> WAV
 ```bash
-# python mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
+# python examples/mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
 
 # When executing without specifying the microphone index.
 # When you want to save the audio after echo cancellation as a WAV file.
@@ -84,7 +84,7 @@ ctrl + c
 ```
 ### 4. Mic + Speaker (reference_speaker) -> Speaker
 ```bash
-# python mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
+# python examples/mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
 
 # When manually specifying the microphone and speaker.
 #   output_mode: Specify speaker to play the echo-canceled audio on the speaker.
@@ -96,7 +96,7 @@ ctrl + c
 ```
 ### 5. Mic + Speaker (reference_speaker) -> Virtual Speaker
 ```bash
-# python mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
+# python examples/mic_speaker_aec.py [output_mode] [mic_index] [output_device_index]
 
 # When manually specifying the microphone and speaker.
 #   output_mode: Specify speaker to play the echo-canceled audio on the speaker.
