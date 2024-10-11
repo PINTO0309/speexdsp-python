@@ -203,10 +203,16 @@ if output_mode == 'speaker':
 echo_canceller = EchoCanceller.create(FRAME_SIZE, BUFFER_SIZE, SAMPLE_RATE)
 
 # WAVファイルへの書き込み設定
-output_filename = "echo_cancelled_output.wav"
-wav_file = None
+output_filename_mic = "mic.wav"
+output_filename_ref = "ref.wav"
+output_filename_ec = "ec.wav"
+wav_file_mic = None
+wav_file_ref = None
+wav_file_ec = None
 if output_mode == 'wav':
-    wav_file = sf.SoundFile(output_filename, mode='w', samplerate=SAMPLE_RATE, channels=1, subtype='PCM_16')
+    wav_file_mic = sf.SoundFile(output_filename_mic, mode='w', samplerate=SAMPLE_RATE, channels=1, subtype='PCM_16')
+    wav_file_ref = sf.SoundFile(output_filename_ref, mode='w', samplerate=SAMPLE_RATE, channels=1, subtype='PCM_16')
+    wav_file_ec = sf.SoundFile(output_filename_ec, mode='w', samplerate=SAMPLE_RATE, channels=1, subtype='PCM_16')
 
 # 音声データを処理する関数
 def process_audio_callback(mic_data: np.ndarray, reference_data: np.ndarray):
@@ -230,8 +236,10 @@ def process_audio_callback(mic_data: np.ndarray, reference_data: np.ndarray):
     # 出力先に応じて処理を行う
     if output_mode == 'speaker' and output_speaker:
         output_speaker.play(processed_data, samplerate=SAMPLE_RATE)
-    elif output_mode == 'wav' and wav_file:
-        wav_file.write(processed_data)
+    elif output_mode == 'wav' and wav_file_mic and wav_file_ref:
+        wav_file_mic.write(mic_data_scaled)
+        wav_file_ref.write(ref_data_scaled)
+        wav_file_ec.write(processed_data)
 
 print("Starting audio processing...")
 
@@ -253,7 +261,11 @@ except KeyboardInterrupt:
 
 finally:
     # WAVファイルを閉じる
-    if wav_file:
-        wav_file.close()
+    if wav_file_mic:
+        wav_file_mic.close()
+    if wav_file_ref:
+        wav_file_ref.close()
+    if wav_file_ec:
+        wav_file_ec.close()
 
     print("Audio processing terminated.")
